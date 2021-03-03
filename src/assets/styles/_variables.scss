@@ -1,0 +1,25 @@
+//Parcial dedicado a variables
+
+@use "sass:color";
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$color-completo: #73edff;
+$bg: color.scale($color-completo, $lightness: 70%);
+
+//Creamos una funcion para devovler el color azul oscuro.
+@function azul() {
+  @return #000078;
+}
+
+//Creamos un extends para usarlo en el contenedor que necesitemos
+%contenedores{
+  width: 70vw;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid;
+  padding: 13px;
+  line-height: 1.5em;
+}

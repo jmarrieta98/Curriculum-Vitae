@@ -1,0 +1,81 @@
+//Parcial donde está escrito todo el código de la página
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  color: azul();
+  background: $bg;
+  margin: 2%;
+}
+
+.contenedores {
+  @extend %contenedores;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.contacto {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+  background: mediumblue;
+  color: white;
+
+  ul {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.fecha, .direccion {
+  color: darkgray;
+}
+
+canvas {
+  position: absolute;
+  z-index: -1;
+  width: 98%;
+  height: 200vh;
+}
+
+main {
+  display: flex;
+
+  .contenido {
+    flex-direction: column;
+  }
+}
+
+.presentacion{
+  display: flex;
+  align-content: center;
+  img{
+    margin-left: 20px;
+    border-radius: 100%;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: inline;
+  }
+  .contenedores {
+    width: 92%;
+  }
+  canvas {
+    height: 250vh;
+  }
+  body {
+    margin: 5px;
+  }
+  .presentacion{
+    flex-direction: column;
+  }
+}
